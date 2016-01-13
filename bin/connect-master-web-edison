@@ -1,6 +1,8 @@
 #!/bin/bash
 
-PID=`/bin/ps -ef | /bin/grep 8001 | /bin/grep -v grep | /usr/bin/awk '{ print $1 }'`
+git pull
+
+PID=`/bin/ps | /bin/grep 8001 | /bin/grep -v grep | /usr/bin/awk '{ print $1 }'`
 if [ "DISCONNECTED$PID" == "DISCONNECTED" ]
 then
         echo "IoT : establishing connection to master"
